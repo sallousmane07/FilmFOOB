@@ -1,0 +1,147 @@
+    <!--========================== First Navbar ==========================-->
+    <nav class="navbar navbar-expand-lg navbar-dark blue-gradient lighten-1 fixed-top my_navbar1" >
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="btn btn-info d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-align-justify"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light">
+                            <button class="btn btn-sm purple-gradient" id="loginBtn" data-toggle="modal"
+                            data-target="#loginFormModal"><i class="fas fa-user"
+                                ></i>Conneion</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light">
+                            <button class="btn btn-sm peach-gradient" id="registerBtn" data-toggle="modal"
+                                data-target="#registerFormModal">
+                                <i class="fas fa-registered"></i>Inscription
+                            </button>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                            aria-labelledby="dropdownInscription">
+                            <a class="dropdown-item" href="#"> <i class="fas fa-user mr-2"></i> Profile</a>
+                            <a class="dropdown-item" href="#"> <i class="fas fa-sign-out-alt mr-2"></i> Logout</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
+                                class="rounded-circle z-depth-0" alt="avatar image" height="35">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                            aria-labelledby="navbarDropdownMenuLink-333">
+                            <a class="dropdown-item" href="#"> <i class="fas fa-user mr-2"></i> Profile</a>
+                            <a class="dropdown-item" href="#"> <i class="fas fa-sign-out-alt mr-2"></i> Logout</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--========================== Second Navbar ==========================-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark my_navbar2" style="margin-top: 70px;">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+                <div class="nav navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light">
+                            <i class="fas fa-house-damage"></i>Action
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light">
+                            <i class="fas fa-house-damage"></i>Comédie
+                        </a>
+                    </li>
+                </div>
+                <ul class="navbar-nav ml-auto">
+                    <form class="form-inline">
+                        <div class="md-form my-0">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Rechercher"
+                                aria-label="Search">
+                        </div>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+            <!--========================== Modal Login Form ==========================-->
+        <div class="modal" id="loginFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog cascading-modal" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!-- Default form login -->
+                <form class="text-center border bg-dark border-light p-5 animated zoomIn" id="loginForm" action="#!">
+                    <p class="h4 mb-4" style="color: white;">Sign in</p>
+
+                    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+                    <input type="password" id="defaultLoginFormPassword" class="form-control" placeholder="Password"
+                        aria-describedby="defaultLoginFormPasswordHelpBlock">
+                    <!-- Sign up button -->
+                    <button class="btn btn-info my-4 btn-block" type="submit">Se connecter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!--========================== Modal Register Form ==========================-->
+    <div class="modal" id="registerFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog cascading-modal" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!-- Default form register -->
+                <form class="text-center border bg-dark border-light p-5 animated zoomIn" id="registerForm" action="#!">
+                    <p class="h4 mb-4" style="color: white;">Sign up</p>
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <input type="text" id="defaultRegisterFormFirstName" class="form-control"
+                                placeholder="First name">
+                        </div>
+                        <div class="col">
+                            <input type="text" id="defaultRegisterFormLastName" class="form-control"
+                                placeholder="Last name">
+                        </div>
+                    </div>
+                    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+                    <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password"
+                        aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                    <!-- Sign up button -->
+                    <button class="btn btn-info my-4 btn-block" type="submit">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </div>
