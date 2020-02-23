@@ -1,5 +1,5 @@
 <?php
-
+    //bonjour vava
     use model\UserDAO;
     use model\User;
 
@@ -11,7 +11,7 @@
         $donnees["prenom"]= $_POST["prenom"];
         $donnees["nom"]= $_POST["nom"];
 
-
+           //
         //var_dump($prenom);die();
         //var_dump($donnees);die();
 
