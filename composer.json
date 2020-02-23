@@ -1,0 +1,7 @@
+{
+    "name": "ousmane_sall/film",
+    "require": {
+        "twig/twig": "^3.0",
+      "ext-pdo": "*"
+    }
+}

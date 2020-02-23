@@ -1,0 +1,12 @@
+{
+	"mysql-film":{
+		"database":"mysql",
+		"host":"localhost",
+		"port":3306,
+		"name":"annuairefilm",
+		"user":"root",
+		"pwd":""
+	}
+}
+
+
