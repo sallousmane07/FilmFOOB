@@ -6,7 +6,7 @@
     $daoUser=new UserDAO($bd);
     if(isset($_POST['inscription'])){
         $donnees=[];
-        $donnees["login"] ='i$i';// $_POST["login"];;
+        $donnees["login"] =$_POST['login'];// $_POST["login"];;
         $donnees["mdp"]= $_POST["mdp"];
         $donnees["prenom"]= $_POST["prenom"];
         $donnees["nom"]= $_POST["nom"];
@@ -28,7 +28,6 @@
        $user->setEstadmin();
         echo $daoUser->update($user);
        var_dump($user);die();
-
         echo $twig->render('connexion.html');
     }
     else

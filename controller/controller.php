@@ -15,16 +15,23 @@ $tabRs= array(
 //var_dump($bd);die();
 
 $serveurRoutes= getUrlSansGet("$_SERVER[REQUEST_URI]");
-$bool=false;
-//ce que le serveur à renvoyer,
-foreach ($tabRs as $key=>$value) {
-    if($serveurRoutes===$key){
-        $bool=true;
-        require $value;
+
+if(session_id() != ""){
+    $bool=false;
+    foreach ($tabRs as $key=>$value) {
+        if($serveurRoutes===$key){
+            $bool=true;
+            require $value;
+        }
     }
+    if(!$bool)
+        echo '404 NOT FOUND';
 }
-if(!$bool)
-    echo '404 NOT FOUND';//s'il ne trouve aucune route; j'appel la page notFOund
+else{
+
+    require 'connexionController.php';
+}
+//s'il ne trouve aucune route; j'appel la page notFOund
 
 
 //fonction qui permet de recuperer l'url que le serveur à renvoyer sans ce qu'il a passé par la methode get;

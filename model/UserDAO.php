@@ -17,6 +17,22 @@ class UserDAO
         public function count(){
         return $this->_db->query('SELECT COUNT(*) FROM User')->fetchColumn() or die(print_r($this->_db->errorInfo()));
     }
+    public function verifieConnexion(User $User){
+        $q =  $this->_db->prepare('SELECT *
+                                   FROM User 
+                                   WHERE login = :login and mdp =:mdp');
+        $q->bindvalue(':login',$User->login());
+        $q->bindvalue(':mdp',$User->mdp());
+        $q->execute();
+        if($q){
+            $donnees=$q->fetch(\PDO::FETCH_ASSOC);
+            if(!$donnees)
+                return null;
+            return new User($donnees);
+        }
+        return null;
+
+    }
     public function is_exist(User $User){
         $q =  $this->_db->prepare('SELECT COUNT(*) 
                                    FROM User 
